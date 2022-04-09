@@ -13,7 +13,7 @@ public class FindMax {
         int maxValueOfXYZ = Math.max(maxValueOfXY, z);
         int maxValueOfAB = Math.max(a, b);
 
-        int maxOfEvery = Math.max(Math.max(Math.max(8, 20), 12_345), Math.max(34, 123));
+        int maxOfEvery = Math.max(Math.max(Math.max(x, y),z), Math.max(a,b));
 
         System.out.println("maxValueOfXY " + maxValueOfXY);
         System.out.println("maxValueOfXYZ " + maxValueOfXYZ);
