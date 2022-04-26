@@ -1,7 +1,6 @@
-package collectionFramework;
+package collectionsFramework;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 
 public class Exercise01_remove_duplicates {

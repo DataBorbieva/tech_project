@@ -1,6 +1,5 @@
-package collectionFramework;
+package collectionsFramework;
 
-import javax.security.auth.login.AccountExpiredException;
 import java.util.ArrayList;
 import java.util.TreeSet;
 

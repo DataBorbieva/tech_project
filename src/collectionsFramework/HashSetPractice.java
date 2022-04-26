@@ -1,7 +1,6 @@
-package collectionFramework;
+package collectionsFramework;
 
 import java.util.HashSet;
-import java.util.Set;
 
 public class HashSetPractice {
     public static void main(String[] args) {

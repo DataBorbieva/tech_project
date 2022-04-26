@@ -1,7 +1,6 @@
-package collectionFramework;
+package collectionsFramework;
 
 import java.util.TreeMap;
-import java.util.TreeSet;
 
 public class TreeMapPractice {
     public static void main(String[] args) {
