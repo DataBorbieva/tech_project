@@ -10,11 +10,13 @@ public class Fruit {
     static {
         System.out.println("This is static block");
         hasColor = true;
+
     }
 
     {
         System.out.println("This is instance block");
         shape = "Round";
         isSweet = true;
+
     }
 }

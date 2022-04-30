@@ -1,6 +1,7 @@
 package recursion;
 
 public class _02_ProductOfNumbers {
+
     public static int productOfNumRecursion(int n) {
 
         if(n <= 0) return 0;     //negative numbers can NOT break this program
@@ -17,5 +18,6 @@ public class _02_ProductOfNumbers {
         System.out.println(productOfNumRecursion(4)); //24
         System.out.println(productOfNumRecursion(0)); //0
         System.out.println(productOfNumRecursion(-2)); //0
+        System.out.println(productOfNumRecursion(5)); //120
     }
 }
