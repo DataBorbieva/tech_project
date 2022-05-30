@@ -134,13 +134,7 @@
     -This method will take an int array as argument and it will return the
     array with every number replaced with their factorials.
     NOTE: Assume length will always be more than zero.
-    NOTE: 0! is equals to 1
-    Test Data 1: [1, 2, 3, 4]
-    Expected Result 1: [1, 2, 6, 24]
-    Test Data 2: [0, 2, 4 , 1]
-    Expected Result 2: [1, 2, 24, 1]
-    Test Data 3:[5 , 0, 6]
-    Expected Result 3: [120, 1, 720]
+  
          */
         //Task-7
         public static int[] arrFactorial(int[] nums) {
@@ -165,7 +159,7 @@
     NOTE: Assume length will always be more than zero.
 
          */
-
+        //Task-8
         public static String[] categorizeCharacters(String str) {
     //    String[] split = str.split(str);
             //  ArrayList<String> str1 = new ArrayList<>();
@@ -184,6 +178,17 @@
             arr[1] = digits;
             arr[2] = specials;
             return arr;
+        }
+        public static String[] categorizeCharacters1(String str){
+            String[] catg = {"", "", ""};
+
+            for (char character : str.toCharArray()) {
+                if (Character.isLetter(character)) catg[0] += character + "";
+                else if (Character.isDigit(character)) catg[1] += character + "";
+                else catg[2] += character + "";
+            }
+
+            return catg;
         }
 
 
