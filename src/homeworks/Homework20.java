@@ -141,7 +141,7 @@ and make the old first word’s first letter lower c
         StringBuilder strNew = new StringBuilder();
         if (!str.trim().contains(" ")) return "There is not enough words!";
         for (int i = strArr.length - 1; i >= 0; i--) {
-            strNew.append(strArr[i].toLowerCase() + " ");
+            strNew.append(strArr[i].toLowerCase() + " ");  //append() is e method for concatenation
         }
         return strNew.substring(0, 1).toUpperCase().concat(strNew.substring(1)).trim();
     }
@@ -161,6 +161,7 @@ return a String without the special characters or digits.
 */
 //Task-6
   public static String removeStringSpecialsDigits(String str) {
+      //if it is not Digit and not Special return it in new string container 
 
       return str = str.replaceAll("[^a-zA-Z ]", "");
   }
