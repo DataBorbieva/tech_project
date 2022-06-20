@@ -50,6 +50,20 @@ and 5.
         return cont;
 
     }
+public static int findSumNumbersRecap(String s) {
+    int sum = 0;
+    String currentNum = "";
+    for (int i = 0; i < s.length(); i++) {
+        if (Character.isDigit(s.charAt(i))) {
+            currentNum += s.charAt(i) + "";
+            if (i < s.length() - 1 && !Character.isDigit(s.charAt(i + 1))) {
+                sum += Integer.parseInt(currentNum);
+                currentNum = "";
+            }
+        }
+    }
+    return sum;
+}
 
  /* TASK 4
     -Create a method called findBiggestNumber()
