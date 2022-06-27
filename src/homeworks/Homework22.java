@@ -34,6 +34,32 @@ Expected Result 3: [1, 1, 2, 3, 5, 8, 13]
         return array;
     }
 
+    public static int[] fibonacciSeries1Salih(int n){
+        /*
+          int[] fib;
+            if (n >= 0)fib = new int[n];
+            else fib = new int[0];
+         */
+        int[] fib = new int[n];
+
+        if (n > 0) fib[0] = 0;
+        if (n > 1) fib[1] = 1;
+
+//        fib[2] = fib[1] + fib[0];
+//        fib[3] = fib[2] + fib[1];
+//        fib[4] = fib[3] + fib[2];
+
+        // n = 4 ==> [0, 1, 1, 2]
+
+        for (int i = 0; i < n - 2; i++) {
+            // n = 4
+            // i = 0 => 3rd number is found
+            // i = 1 => 4th number is found
+            fib[i + 2] = fib[i + 1] + fib[i];
+        }
+
+        return fib;
+    }
 
 
 
@@ -41,7 +67,7 @@ Expected Result 3: [1, 1, 2, 3, 5, 8, 13]
     Requirement:
 -Create a method called fibonacciSeries2()
 -This method will take an int argument as n, and it will
-return the nth series of Fibonacci number as an
+return the n series of Fibonacci number as an
 int.
 REMEMBER: Fibonacci series = 1, 1, 2, 3, 5, 8, 13, 21
 Test Data 1: 2
@@ -63,6 +89,21 @@ Expected Result 3: 21
             num2 = num3;
         }
         return array[array.length - 1];
+    }
+
+    //Salih way
+    public static int fibonacciSeries2Way2(int n){
+        // 0 1 1 2 3 5
+        int n0 = 0, n1 = 1, n2 = 0;
+        for (int i = 1; i < n - 1; i++) {
+            n2 = n0 + n1;
+            n0 = n1;
+            n1 = n2;
+        }
+        return n2;
+    }
+    public static int fibonacciSeries2Salih(int n){
+        return fibonacciSeries1(n)[n -1];
     }
     /*
     Requirement:
@@ -134,6 +175,11 @@ public static boolean isPowerOf3(int number) {
             number /= 3;
         }
         return number == 1;
+    }
+
+    public static boolean isPowerOf3Johnatan(int arg) {
+        if (arg > 1) return isPowerOf3(arg / 3);
+        else return arg == 1;
     }
 
 /*
